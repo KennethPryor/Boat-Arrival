@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Boat Arrivals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' />
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m10">
+                <table class="striped" id="boat_table">
+                    <thead>
+                        <tr>
+                            <th>Boat Name</th>
+                            <th>Destination</th>
+                            <th>Arrival Time (Military Time)</th>
+                            <th>Next Arrival Time</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="boat_tbody">
+                        <tr>
+                            <td>Titanic</td>
+                            <td>New York</td>
+                            <td>08:15</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m10" id="boat_form">
+                <form action="">
+                <div class="input-field col s6">
+                    <input placeholder="Boat Name" id="boat_name" type="text" class="validate">
+                    <label for="boat_name">Boat Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Destination" id="boat_destination" type="text" class="validate">
+                    <label for="boat_destination">Destination</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Arrival Time" id="boat_arrival" type="text" class="validate">
+                    <label for="boat_arrival">Next Arrival Time (HH:mm - Military Time)</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Frequency (min)" id="boat_frequency" type="text" class="validate">
+                    <label for="boat_frequency">Frequency (min)</label>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="add-boat">Add Boat</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
+<script src="../../server.js"></script>
+
+</html>

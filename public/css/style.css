@@ -1,0 +1,11 @@
+body {
+    background-color: blue;
+}
+
+#boat_form,
+#boat_table {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
